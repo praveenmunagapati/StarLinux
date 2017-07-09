@@ -277,6 +277,19 @@ kernel_build () {
 	# ^^^ Linux Kernel 4.10 =< Support Fix ^^^
 	sed -i "s/.*CONFIG_EFI_STUB.*/CONFIG_EFI_STUB=y/" .config
 	echo "CONFIG_EFI_MIXED=y" >> .config
+	# Temporary atk9k Wi-Fi Module Support
+	# BEGIN:
+	echo "Adding atk9k Wi-Fi Module Support..."
+	sed -i "s/.*CONFIG_RFKILL.*/CONFIG_RFKILL=y/" .config
+	sed -i "s/.*CONFIG_CFG80211.*/CONFIG_CFG80211=y/" .config
+	sed -i "s/.*CONFIG_MAC80211.*/CONFIG_MAC80211=y/" .config
+	sed -i "s/.*CONFIG_NO_DMA.*/CONFIG_NO_DMA=y/" .config
+	sed -i "s/.*CONFIG_HAS_DMA.*/CONFIG_HAS_DMA=y/" .config
+	sed -i "s/.*CONFIG_ATH9k.*/CONFIG_ATH9k=y/" .config
+	echo "DEBUG OUTPUT"
+	sleep 10
+	# END:
+	# Temporary atk9k Wi-Fi Module Support
 	mkdir $BUILD_DIR/Work/linux_extra
 	mkdir $BUILD_DIR/Work/linux_extra/lib
 	mkdir $BUILD_DIR/Work/linux_extra/lib/firmware
