@@ -277,6 +277,8 @@ kernel_build () {
 	# ^^^ Linux Kernel 4.10 =< Support Fix ^^^
 	sed -i "s/.*CONFIG_EFI_STUB.*/CONFIG_EFI_STUB=y/" .config
 	echo "CONFIG_EFI_MIXED=y" >> .config
+	echo "Before Adding atk9k Wi-Fi Module Support..."
+	sleep 5
 	# Temporary atk9k Wi-Fi Module Support
 	# BEGIN:
 	echo "Adding atk9k Wi-Fi Module Support..."
