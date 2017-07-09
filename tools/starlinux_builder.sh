@@ -283,6 +283,7 @@ kernel_build () {
 	# BEGIN:
 	echo "Adding atk9k Wi-Fi Module Support..."
 	sed -i "s/.*CONFIG_ATH9K.*/CONFIG_ATH9K=y/" .config
+	echo "CONFIG_ATH9K_HTC=y" >> .config
 	echo "DEBUG OUTPUT"
 	sleep 10
 	# END:
