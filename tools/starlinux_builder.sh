@@ -284,6 +284,15 @@ kernel_build () {
 	echo "Adding atk9k Wi-Fi Module Support..."
 	sed -i "s/.*CONFIG_ATH9K.*/CONFIG_ATH9K=y/" .config
 	echo "CONFIG_ATH9K_HTC=y" >> .config
+	echo "CONFIG_ATH9K_BTCOEX_SUPPORT=n" >> .config
+	echo "CONFIG_ATH9K_PCI=y" >> .config
+	echo "CONFIG_ATH9K_AHB=n" >> .config
+	echo "CONFIG_ATH9K_DEBUGFS=n" >> .config
+	echo "CONFIG_ATH9K_DYNACK=n" >> .config
+	echo "CONFIG_ATH9K_WOW=n" >> .config
+	echo "CONFIG_ATH9K_CHANNEL_CONTEXT=n" >> .config
+	echo "CONFIG_ATH9K_HTC_DEBUGFS=n" >> .config
+	echo "CONFIG_ATH9K_HWRNG=n" >> .config
 	echo "DEBUG OUTPUT"
 	sleep 10
 	# END:
