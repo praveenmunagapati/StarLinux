@@ -282,12 +282,7 @@ kernel_build () {
 	# Temporary atk9k Wi-Fi Module Support
 	# BEGIN:
 	echo "Adding atk9k Wi-Fi Module Support..."
-	sed -i "s/.*CONFIG_RFKILL.*/CONFIG_RFKILL=y/" .config
-	sed -i "s/.*CONFIG_CFG80211.*/CONFIG_CFG80211=y/" .config
-	sed -i "s/.*CONFIG_MAC80211.*/CONFIG_MAC80211=y/" .config
-	sed -i "s/.*CONFIG_NO_DMA.*/CONFIG_NO_DMA=y/" .config
-	sed -i "s/.*CONFIG_HAS_DMA.*/CONFIG_HAS_DMA=y/" .config
-	sed -i "s/.*CONFIG_ATH9k.*/CONFIG_ATH9k=y/" .config
+	sed -i "s/.*CONFIG_ATH9K.*/CONFIG_ATH9K=y/" .config
 	echo "DEBUG OUTPUT"
 	sleep 10
 	# END:
